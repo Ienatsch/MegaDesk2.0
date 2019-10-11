@@ -76,9 +76,9 @@ namespace MegaDesk.Forms
         private void ValidateDepth(object sender, CancelEventArgs e)
         {
             TextBox depthBox = (TextBox)sender;
-            if (Int32.TryParse(depthBox.Text, out int width))
+            if (Int32.TryParse(depthBox.Text, out int depth))
             {
-                if (width < 12 || width > 48)
+                if (depth < 12 || depth > 48)
                 {
                     depthBox.BackColor = Color.Red;
                 }
