@@ -139,7 +139,7 @@ namespace MegaDesk.Forms
             else
             {
                 newQuote.SetRushOrder(true);
-                newQuote.SetRushOrderTime(Int32.Parse(rushOrder.Text[0].ToString()));
+                newQuote.SetRushOrderTime(Int32.Parse(rushOrder.Text.Split(' ')[0]));
             }
             newQuote.CalcTotalPrice();
             DisplayQuote.GetSubmittedQuote(newQuote);
