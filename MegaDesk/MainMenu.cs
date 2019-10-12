@@ -17,7 +17,6 @@ namespace MegaDesk
         // Opens Add Quote form on button click
         private void AddQuote_Click(object sender, EventArgs e)
         {
-            object quote = new object();
             Form addQuoteForm = new AddQuote();
             addQuoteForm.ShowDialog();
         }
