@@ -18,7 +18,6 @@ namespace MegaDesk
 
     class Desk
     {
-        private int _surfaceArea;
         //private int MIN_WIDTH = 24;
         //private int MAX_WIDTH = 96;
         //private int MIN_DEPTH = 12;
