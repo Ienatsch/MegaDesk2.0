@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace MegaDesk.Forms
 {
@@ -23,6 +25,10 @@ namespace MegaDesk.Forms
             }
 
             searchMaterials.SelectedIndex = 0;
-        }
+
+            var deskQuote = new DeskQuote();
+            var quotes = deskQuote.GetAllQuotes();
+
+        }      
     }
 }

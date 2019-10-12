@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace MegaDesk
 {
@@ -104,6 +106,19 @@ namespace MegaDesk
             }
             sw.Close();
             return rushPrices;
-        }     
+        }
+
+        public List<DeskQuote> GetAllQuotes()
+        {
+            StreamReader sr = new StreamReader("quotes.json");
+            List<DeskQuote> allQuotes = new List<DeskQuote>();
+
+            while (!sr.EndOfStream)
+            {
+                allQuotes.Add(JsonConvert.DeserializeObject<DeskQuote>(sr.ReadLine()));
+            }
+
+            return allQuotes;
+        }
     }
 }
