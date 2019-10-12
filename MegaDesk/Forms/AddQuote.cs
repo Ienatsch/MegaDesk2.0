@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace MegaDesk.Forms
 {
@@ -15,10 +17,10 @@ namespace MegaDesk.Forms
     {
         public AddQuote()
         {
-            InitializeComponent();
+            InitializeComponent();           
 
             // Add surface materials to dropdown box
-            foreach (var item in Enum.GetValues(typeof(SurfaceMaterial)))
+                foreach (var item in Enum.GetValues(typeof(SurfaceMaterials)))
             {
                 surfaceMaterial.Items.Add(item);
             }
@@ -108,43 +110,59 @@ namespace MegaDesk.Forms
         private void SubmitQuote_Click(object sender, EventArgs e)
         {
             DeskQuote newQuote = new DeskQuote();
-            newQuote.SetCustomerName($"{firstName.Text}  {lastName.Text}");
+            newQuote.Name = $"{firstName.Text}  {lastName.Text}";
+
+            // Disallows submission if width is NaN
             try
             {
-                newQuote.SetWidth(Int32.Parse(width.Text));
+                newQuote.Width = Int32.Parse(width.Text);
             }
             catch
             {
                 width.BackColor = Color.Red;
                 return;
             }
-
+            // Disallows submission if depth is NaN
             try
             {
-                newQuote.SetDepth(Int32.Parse(depth.Text));
+                newQuote.Depth = Int32.Parse(depth.Text);
             }
             catch
             {
                 depth.BackColor = Color.Red;
                 return;
             }
-            newQuote.SetNumDrawers((int)numDrawers.Value);
-            newQuote.SetSurfaceMaterial(surfaceMaterial.Text);
-            newQuote.SetSurfacePrice();
+            newQuote.NumDrawers = (int)numDrawers.Value;
+            newQuote.SurfaceMaterial = surfaceMaterial.Text;
+                if (Enum.TryParse(newQuote.SurfaceMaterial, out SurfaceMaterials material))
+                {
+                    newQuote.SurfacePrice = (int)material;
+                }
             if (rushOrder.Text == "Standard - 14 Day")
             {
-                newQuote.SetRushOrder(false);
-                newQuote.SetRushOrderTime(14);
+                newQuote.RushOrder = false;
+                newQuote.RushOrderTime = 14;
+                newQuote.RushOrderPrice = newQuote.CalcRushOrderPrice();
             }
             else
             {
-                newQuote.SetRushOrder(true);
-                newQuote.SetRushOrderTime(Int32.Parse(rushOrder.Text.Split(' ')[0]));
+                newQuote.RushOrder = true;
+                newQuote.RushOrderTime = Int32.Parse(rushOrder.Text.Split(' ')[0]);
+                newQuote.RushOrderPrice = newQuote.CalcRushOrderPrice();
             }
-            newQuote.CalcTotalPrice();
+            newQuote.TotalPrice = newQuote.CalcTotalPrice();
+        
+            // Writes Quote to JSON file
+            StreamWriter sw = new StreamWriter("quotes.json");
+            var serializedQuote = JsonConvert.SerializeObject(newQuote);
+            sw.WriteLine(serializedQuote);
+            sw.Close();
+
+            // Opens up submitted quote in DisplayQuote form
             DisplayQuote.GetSubmittedQuote(newQuote);
             Form displayQuoteForm = new DisplayQuote();
             displayQuoteForm.ShowDialog();
+            
         }
     }
 }

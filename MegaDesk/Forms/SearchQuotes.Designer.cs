@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.searchMaterials = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // searchMaterials
+            // 
+            this.searchMaterials.FormattingEnabled = true;
+            this.searchMaterials.Location = new System.Drawing.Point(234, 81);
+            this.searchMaterials.Name = "searchMaterials";
+            this.searchMaterials.Size = new System.Drawing.Size(121, 21);
+            this.searchMaterials.TabIndex = 0;
+            // 
+            // SearchQuotes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.searchMaterials);
+            this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox searchMaterials;
     }
 }
