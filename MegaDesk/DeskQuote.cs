@@ -18,7 +18,7 @@ namespace MegaDesk
 
         public int CalcRushOrderPrice()
         {
-            var surfaceArea = GetSurfaceArea();
+            var surfaceArea = SurfaceArea;
             int rushOrderPrice = 0;
             bool isSmallDesk = surfaceArea < 1000;
             bool isMedDesk = surfaceArea >= 1000 && surfaceArea <= 2000;
@@ -79,9 +79,9 @@ namespace MegaDesk
         public decimal CalcTotalPrice()
         {
             decimal totalPrice = 200 + (NumDrawers * 50) + SurfacePrice + RushOrderPrice;
-            if (GetSurfaceArea() > 1000)
+            if (SurfaceArea > 1000)
             {
-                totalPrice += GetSurfaceArea() - 1000;
+                totalPrice += SurfaceArea - 1000;
             }
 
             return totalPrice;

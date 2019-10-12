@@ -21,7 +21,7 @@ namespace MegaDesk.Forms
             width.Text = $"{_submittedQuote.Width.ToString()} in";
             depth.Text = $"{_submittedQuote.Depth.ToString()} in";
             drawers.Text = _submittedQuote.NumDrawers.ToString();
-            surfaceArea.Text = $"{_submittedQuote.GetSurfaceArea().ToString()} in";
+            surfaceArea.Text = $"{_submittedQuote.SurfaceArea.ToString()} in";
             surfaceMaterial.Text = _submittedQuote.SurfaceMaterial;
             surfacePrice.Text = $"${_submittedQuote.SurfacePrice.ToString()}";
             deliveryMethod.Text = $"{_submittedQuote.RushOrderTime.ToString()} Day";

@@ -29,16 +29,11 @@ namespace MegaDesk
         public int NumDrawers { get; set; }
         public string SurfaceMaterial { get; set; }
         public int SurfacePrice { get; set; }
+        public int SurfaceArea { get; set; }
 
-        public int GetSurfaceArea()
+        public int CalcSurfaceArea()
         {
-            CalcSurfaceArea();
-            return _surfaceArea;
-        }
-
-        public void CalcSurfaceArea()
-        {
-            _surfaceArea = Depth * Width;
+            return Depth * Width;
         }
     }
 }

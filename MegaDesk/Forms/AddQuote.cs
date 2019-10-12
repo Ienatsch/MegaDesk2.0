@@ -132,6 +132,8 @@ namespace MegaDesk.Forms
                 depth.BackColor = Color.Red;
                 return;
             }
+
+            newQuote.SurfaceArea = newQuote.CalcSurfaceArea();
             newQuote.NumDrawers = (int)numDrawers.Value;
             newQuote.SurfaceMaterial = surfaceMaterial.Text;
                 if (Enum.TryParse(newQuote.SurfaceMaterial, out SurfaceMaterials material))
