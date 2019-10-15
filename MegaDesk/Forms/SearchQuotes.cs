@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
 namespace MegaDesk.Forms
 {
-    public partial class SearchQuotes : Form
+    public partial class searchQuotes : Form
     {
-        public SearchQuotes()
+        private readonly List<DeskQuote> _allQuotes;
+
+        public searchQuotes()
         {
             InitializeComponent();
 
@@ -26,9 +29,36 @@ namespace MegaDesk.Forms
 
             searchMaterials.SelectedIndex = 0;
 
+            // Gets all quotes stored in quotes.json
             var deskQuote = new DeskQuote();
-            var quotes = deskQuote.GetAllQuotes();
+            _allQuotes = deskQuote.GetAllQuotes();
+        }
 
-        }      
+        private void GetQuotesByMaterial(object sender, EventArgs e)
+        {
+            // Gets quotes that use selected material
+            IEnumerable<DeskQuote> quotes = _allQuotes.Where(x => x.SurfaceMaterial == searchMaterials.Text);
+
+            // Clears grid view for new searches
+            searchedQuotes.Rows.Clear();
+
+            // Inserts each quote found into grid view
+            foreach (DeskQuote quote in quotes)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                for (int i = 0; i < 7; i++)
+                {
+                    row.Cells.Add(new DataGridViewTextBoxCell());
+                }
+                row.Cells[0].Value = quote.Name;
+                row.Cells[1].Value = new DateTime().Date;
+                row.Cells[2].Value = quote.Width;
+                row.Cells[3].Value = quote.Depth;
+                row.Cells[4].Value = quote.NumDrawers;
+                row.Cells[5].Value = quote.SurfaceMaterial;
+                row.Cells[6].Value = quote.TotalPrice;
+                searchedQuotes.Rows.Add(row);               
+            }
+        }
     }
 }

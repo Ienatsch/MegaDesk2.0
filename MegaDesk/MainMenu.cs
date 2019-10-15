@@ -31,7 +31,7 @@ namespace MegaDesk
         // Opens Search Quotes form on button click
         private void SearchQuotes_Click(object sender, EventArgs e)
         {
-            Form searchQuotesForm = new SearchQuotes();
+            Form searchQuotesForm = new searchQuotes();
             searchQuotesForm.ShowDialog();
         }
 
@@ -56,7 +56,7 @@ namespace MegaDesk
                     viewQuotesForm.ShowDialog();
                     break;
                 case 's':
-                    Form searchQuotesForm = new SearchQuotes();
+                    Form searchQuotesForm = new searchQuotes();
                     searchQuotesForm.ShowDialog();
                     break;
                 case 'x':
