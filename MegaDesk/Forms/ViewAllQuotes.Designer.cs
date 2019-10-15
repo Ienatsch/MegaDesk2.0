@@ -28,32 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.allQuotesBox = new System.Windows.Forms.ListBox();
+            this.viewAllQuotesGrid = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // allQuotesBox
+            // viewAllQuotesGrid
             // 
-            this.allQuotesBox.FormattingEnabled = true;
-            this.allQuotesBox.Location = new System.Drawing.Point(66, 26);
-            this.allQuotesBox.Name = "allQuotesBox";
-            this.allQuotesBox.ScrollAlwaysVisible = true;
-            this.allQuotesBox.Size = new System.Drawing.Size(367, 225);
-            this.allQuotesBox.TabIndex = 0;
+            this.viewAllQuotesGrid.AllowUserToAddRows = false;
+            this.viewAllQuotesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.viewAllQuotesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Date,
+            this.Width,
+            this.Depth,
+            this.Drawers,
+            this.Material,
+            this.Price});
+            this.viewAllQuotesGrid.Location = new System.Drawing.Point(25, 12);
+            this.viewAllQuotesGrid.Name = "viewAllQuotesGrid";
+            this.viewAllQuotesGrid.Size = new System.Drawing.Size(742, 372);
+            this.viewAllQuotesGrid.TabIndex = 0;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // Width
+            // 
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            this.Width.ReadOnly = true;
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            this.Depth.ReadOnly = true;
+            // 
+            // Drawers
+            // 
+            this.Drawers.HeaderText = "Drawers";
+            this.Drawers.Name = "Drawers";
+            this.Drawers.ReadOnly = true;
+            // 
+            // Material
+            // 
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 291);
-            this.Controls.Add(this.allQuotesBox);
-            this.Name = "ViewAllQuotes";
+            this.ClientSize = new System.Drawing.Size(796, 416);
+            this.Controls.Add(this.viewAllQuotesGrid);
             this.Text = "ViewAllQuotes";
+            ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox allQuotesBox;
+        private System.Windows.Forms.DataGridView viewAllQuotesGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

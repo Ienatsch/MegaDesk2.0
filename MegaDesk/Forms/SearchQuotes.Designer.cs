@@ -51,6 +51,7 @@
             // 
             // searchedQuotes
             // 
+            this.searchedQuotes.AllowUserToAddRows = false;
             this.searchedQuotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.searchedQuotes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
