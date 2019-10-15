@@ -13,11 +13,6 @@ namespace MegaDesk
 
     class Desk
     {
-        //private int MIN_WIDTH = 24;
-        //private int MAX_WIDTH = 96;
-        //private int MIN_DEPTH = 12;
-        //private int MAX_DEPTH = 48;
-
         public int Width { get; set; }
         public int Depth { get; set; }
         public int NumDrawers { get; set; }
