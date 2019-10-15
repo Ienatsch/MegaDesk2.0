@@ -103,6 +103,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\quotes.json" />
     <None Include="MegaDesk.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -119,7 +120,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="quotes.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -128,7 +128,7 @@
     <None Include="Assets\Images\deskPicture.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="rushOrderPrices.txt" />
+    <Content Include="Data\rushOrderPrices.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
