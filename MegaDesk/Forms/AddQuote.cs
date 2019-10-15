@@ -9,6 +9,11 @@ namespace MegaDesk.Forms
 {
     public partial class AddQuote : Form
     {
+        private const int MinWidth = 24;
+        private const int MaxWidth = 96;
+        private const int MinDepth = 12;
+        private const int MaxDepth = 48;
+
         public AddQuote()
         {
             InitializeComponent();           
@@ -54,7 +59,7 @@ namespace MegaDesk.Forms
             TextBox widthBox = (TextBox)sender;
             if (Int32.TryParse(widthBox.Text, out int width))
             {
-                if (width < 24 || width > 96)
+                if (width < MinWidth || width > MaxWidth)
                 {
                     widthBox.BackColor = Color.Red;
                 }
@@ -74,7 +79,7 @@ namespace MegaDesk.Forms
             TextBox depthBox = (TextBox)sender;
             if (Int32.TryParse(depthBox.Text, out int depth))
             {
-                if (depth < 12 || depth > 48)
+                if (depth < MinDepth || depth > MaxDepth)
                 {
                     depthBox.BackColor = Color.Red;
                 }
