@@ -8,7 +8,8 @@ namespace MegaDesk
     {
         private const int BasePrice = 200;
         private const int PricePerDrawer = 50;
-        private const int MaxUnchargedDeskArea = 1000;
+        private const int MaxAreaSmallDesk = 1000;
+        private const int MaxAreaMedDesk = 2000;
 
         public string Name { get; set; }
         public bool RushOrder { get; set; }
@@ -20,8 +21,8 @@ namespace MegaDesk
         {
             var surfaceArea = SurfaceArea;
             int rushOrderPrice = 0;
-            bool isSmallDesk = surfaceArea < 1000;
-            bool isMedDesk = surfaceArea >= 1000 && surfaceArea <= 2000;
+            bool isSmallDesk = surfaceArea < MaxAreaSmallDesk;
+            bool isMedDesk = surfaceArea >= MaxAreaSmallDesk && surfaceArea <= MaxAreaMedDesk;
             int[,] rushOrderPrices = GetRushOrderPrices();
 
             switch (RushOrderTime)
@@ -79,9 +80,9 @@ namespace MegaDesk
         public decimal CalcTotalPrice()
         {
             decimal totalPrice = BasePrice + (NumDrawers * PricePerDrawer) + SurfacePrice + RushOrderPrice;
-            if (SurfaceArea > MaxUnchargedDeskArea)
+            if (SurfaceArea > MaxAreaSmallDesk)
             {
-                totalPrice += SurfaceArea - MaxUnchargedDeskArea;
+                totalPrice += SurfaceArea - MaxAreaSmallDesk;
             }
 
             return totalPrice;
