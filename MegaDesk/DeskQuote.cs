@@ -6,12 +6,16 @@ namespace MegaDesk
 {
     class DeskQuote : Desk
     {
+        private const int BasePrice = 200;
+        private const int PricePerDrawer = 50;
+        private const int MaxUnchargedDeskArea = 1000;
+
         public string Name { get; set; }
         public bool RushOrder { get; set; }
         public int RushOrderTime { get; set; }
         public int RushOrderPrice { get; set; }
         public decimal TotalPrice { get; set; }
-
+        
         public int CalcRushOrderPrice()
         {
             var surfaceArea = SurfaceArea;
@@ -74,10 +78,10 @@ namespace MegaDesk
 
         public decimal CalcTotalPrice()
         {
-            decimal totalPrice = 200 + (NumDrawers * 50) + SurfacePrice + RushOrderPrice;
-            if (SurfaceArea > 1000)
+            decimal totalPrice = BasePrice + (NumDrawers * PricePerDrawer) + SurfacePrice + RushOrderPrice;
+            if (SurfaceArea > MaxUnchargedDeskArea)
             {
-                totalPrice += SurfaceArea - 1000;
+                totalPrice += SurfaceArea - MaxUnchargedDeskArea;
             }
 
             return totalPrice;
