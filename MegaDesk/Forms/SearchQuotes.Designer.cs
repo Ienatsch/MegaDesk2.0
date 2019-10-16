@@ -38,13 +38,14 @@
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchQuotesBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.searchedQuotes)).BeginInit();
             this.SuspendLayout();
             // 
             // searchMaterials
             // 
             this.searchMaterials.FormattingEnabled = true;
-            this.searchMaterials.Location = new System.Drawing.Point(232, 92);
+            this.searchMaterials.Location = new System.Drawing.Point(248, 96);
             this.searchMaterials.Name = "searchMaterials";
             this.searchMaterials.Size = new System.Drawing.Size(292, 21);
             this.searchMaterials.TabIndex = 0;
@@ -118,17 +119,29 @@
             this.searchQuotesBtn.UseVisualStyleBackColor = true;
             this.searchQuotesBtn.Click += new System.EventHandler(this.GetQuotesByMaterial);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(245, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search by Surface Material";
+            // 
             // searchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.searchQuotesBtn);
             this.Controls.Add(this.searchedQuotes);
             this.Controls.Add(this.searchMaterials);
+            this.Name = "searchQuotes";
             this.Text = "SearchQuotes";
             ((System.ComponentModel.ISupportInitialize)(this.searchedQuotes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,5 +157,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Button searchQuotesBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
