@@ -92,7 +92,7 @@ namespace MegaDesk
         {
             int[,] rushPrices = new int[3, 3];
             //Here is the error Oswaldo is having
-            StreamReader sw = new StreamReader(Directory.GetCurrentDirectory() + "../rushOrderPrices.txt");
+            StreamReader sw = new StreamReader( "../../Data/rushOrderPrices.txt");
             int i = 0, j = 0;
             while (!sw.EndOfStream)
             {
@@ -115,7 +115,7 @@ namespace MegaDesk
 
         public List<DeskQuote> GetAllQuotes()
         {
-            StreamReader sr = new StreamReader("quotes.json");
+            StreamReader sr = new StreamReader("../../Data/quotes.json");
             List<DeskQuote> allQuotes = new List<DeskQuote>();
 
             while (!sr.EndOfStream)

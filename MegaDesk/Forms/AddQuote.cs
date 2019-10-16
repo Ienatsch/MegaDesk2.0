@@ -154,7 +154,7 @@ namespace MegaDesk.Forms
             newQuote.TotalPrice = newQuote.CalcTotalPrice();
         
             // Writes Quote to JSON file
-            StreamWriter sw = new StreamWriter("quotes.json", true);
+            StreamWriter sw = new StreamWriter("../../Data/quotes.json", true);
             var serializedQuote = JsonConvert.SerializeObject(newQuote);
             sw.WriteLine(serializedQuote);
             sw.Close();
