@@ -122,7 +122,7 @@ namespace MegaDesk
             {
                 allQuotes.Add(JsonConvert.DeserializeObject<DeskQuote>(sr.ReadLine()));
             }
-
+            sr.Close();
             return allQuotes;
         }
     }
