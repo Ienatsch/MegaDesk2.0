@@ -91,7 +91,7 @@ namespace MegaDesk
         public int[,] GetRushOrderPrices()
         {
             int[,] rushPrices = new int[3, 3];
-
+            //Here is the error Oswaldo is having
             StreamReader sw = new StreamReader(Directory.GetCurrentDirectory() + "../rushOrderPrices.txt");
             int i = 0, j = 0;
             while (!sw.EndOfStream)
