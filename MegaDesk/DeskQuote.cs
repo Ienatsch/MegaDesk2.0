@@ -100,7 +100,7 @@ namespace MegaDesk
                 {
                     while (j < 3)
                     {
-                        int rushPrice = int.Parse(sw.ReadLine());
+                        int.TryParse(sw.ReadLine(), out int rushPrice);
                         rushPrices[i, j] = rushPrice;
                         j++;
                     }
@@ -122,7 +122,7 @@ namespace MegaDesk
             {
                 allQuotes.Add(JsonConvert.DeserializeObject<DeskQuote>(sr.ReadLine()));
             }
-
+            sr.Close();
             return allQuotes;
         }
     }

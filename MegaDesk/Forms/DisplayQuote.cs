@@ -8,8 +8,9 @@ namespace MegaDesk.Forms
         private static DeskQuote _submittedQuote;
         public DisplayQuote()
         {
-            _submittedQuote.TotalPrice = _submittedQuote.CalcTotalPrice();
             InitializeComponent();
+            _submittedQuote.TotalPrice = _submittedQuote.CalcTotalPrice();
+
             customerName.Text = _submittedQuote.Name;
             width.Text = $"{_submittedQuote.Width.ToString()} in";
             depth.Text = $"{_submittedQuote.Depth.ToString()} in";
