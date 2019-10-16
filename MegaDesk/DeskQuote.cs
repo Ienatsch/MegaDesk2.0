@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -16,6 +17,8 @@ namespace MegaDesk
         public int RushOrderTime { get; set; }
         public int RushOrderPrice { get; set; }
         public decimal TotalPrice { get; set; }
+
+        public DateTime QuoteDate { get; set; } 
         
         public int CalcRushOrderPrice()
         {

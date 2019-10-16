@@ -51,7 +51,7 @@ namespace MegaDesk.Forms
                     row.Cells.Add(new DataGridViewTextBoxCell());
                 }
                 row.Cells[0].Value = quote.Name;
-                row.Cells[1].Value = new DateTime().Date;
+                row.Cells[1].Value = quote.QuoteDate;
                 row.Cells[2].Value = quote.Width;
                 row.Cells[3].Value = quote.Depth;
                 row.Cells[4].Value = quote.NumDrawers;

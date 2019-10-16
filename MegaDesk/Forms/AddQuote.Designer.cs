@@ -124,6 +124,7 @@
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(122, 23);
             this.firstName.TabIndex = 0;
+            this.firstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.firstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateFirstName);
             // 
             // lastName
@@ -133,6 +134,7 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(122, 23);
             this.lastName.TabIndex = 1;
+            this.lastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lastName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateLastName);
             // 
             // lastNameLabel
@@ -152,6 +154,7 @@
             this.depth.Name = "depth";
             this.depth.Size = new System.Drawing.Size(122, 23);
             this.depth.TabIndex = 3;
+            this.depth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.depth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDepthIsInt);
             this.depth.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateDepth);
             // 
@@ -162,6 +165,7 @@
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(122, 23);
             this.width.TabIndex = 2;
+            this.width.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.width.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateWidth);
             // 
             // surfaceMaterial
@@ -201,6 +205,7 @@
             this.numDrawers.Name = "numDrawers";
             this.numDrawers.Size = new System.Drawing.Size(122, 23);
             this.numDrawers.TabIndex = 4;
+            this.numDrawers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddQuote
             // 

@@ -111,6 +111,8 @@ namespace MegaDesk.Forms
             DeskQuote newQuote = new DeskQuote();
             newQuote.Name = $"{firstName.Text}  {lastName.Text}";
 
+            newQuote.QuoteDate = DateTime.Today;
+
             // Disallows submission if width is NaN
             try
             {
