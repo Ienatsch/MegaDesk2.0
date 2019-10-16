@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.viewAllQuotesGrid = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +44,9 @@
             this.viewAllQuotesGrid.AllowUserToAddRows = false;
             this.viewAllQuotesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.viewAllQuotesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.CustName,
             this.Date,
-            this.Width,
+            this.DeskWidth,
             this.Depth,
             this.Drawers,
             this.Material,
@@ -56,11 +56,11 @@
             this.viewAllQuotesGrid.Size = new System.Drawing.Size(742, 372);
             this.viewAllQuotesGrid.TabIndex = 0;
             // 
-            // Name
+            // CustName
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.CustName.HeaderText = "Name";
+            this.CustName.Name = "CustName";
+            this.CustName.ReadOnly = true;
             // 
             // Date
             // 
@@ -68,11 +68,11 @@
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             // 
-            // Width
+            // DeskWidth
             // 
-            this.Width.HeaderText = "Width";
-            this.Width.Name = "Width";
-            this.Width.ReadOnly = true;
+            this.DeskWidth.HeaderText = "Width";
+            this.DeskWidth.Name = "DeskWidth";
+            this.DeskWidth.ReadOnly = true;
             // 
             // Depth
             // 
@@ -104,6 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 416);
             this.Controls.Add(this.viewAllQuotesGrid);
+            this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
             ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).EndInit();
             this.ResumeLayout(false);
@@ -113,9 +114,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView viewAllQuotesGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeskWidth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
