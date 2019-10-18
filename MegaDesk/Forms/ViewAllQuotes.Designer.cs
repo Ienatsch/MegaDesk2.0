@@ -149,7 +149,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewAllQuotesGrid);
             this.Name = "ViewAllQuotes";
-            this.Text = "ViewAllQuotes";
+            this.Text = "View All Quotes";
             ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

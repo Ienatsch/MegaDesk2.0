@@ -229,7 +229,7 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.submitQuote);
             this.Name = "AddQuote";
-            this.Text = "New Quote";
+            this.Text = "Add New Quote";
             ((System.ComponentModel.ISupportInitialize)(this.numDrawers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
