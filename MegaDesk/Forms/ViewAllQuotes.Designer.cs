@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewAllQuotesGrid = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -89,6 +90,48 @@
             this.viewAllQuotesGrid.Size = new System.Drawing.Size(742, 253);
             this.viewAllQuotesGrid.TabIndex = 0;
             // 
+            // CustName
+            // 
+            this.CustName.HeaderText = "Name";
+            this.CustName.Name = "CustName";
+            this.CustName.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // DeskWidth
+            // 
+            this.DeskWidth.HeaderText = "Width";
+            this.DeskWidth.Name = "DeskWidth";
+            this.DeskWidth.ReadOnly = true;
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            this.Depth.ReadOnly = true;
+            // 
+            // Drawers
+            // 
+            this.Drawers.HeaderText = "Drawers";
+            this.Drawers.Name = "Drawers";
+            this.Drawers.ReadOnly = true;
+            // 
+            // Material
+            // 
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -98,48 +141,6 @@
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "All Stored Quotes";
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Material
-            // 
-            this.Material.HeaderText = "Material";
-            this.Material.Name = "Material";
-            this.Material.ReadOnly = true;
-            // 
-            // Drawers
-            // 
-            this.Drawers.HeaderText = "Drawers";
-            this.Drawers.Name = "Drawers";
-            this.Drawers.ReadOnly = true;
-            // 
-            // Depth
-            // 
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            this.Depth.ReadOnly = true;
-            // 
-            // DeskWidth
-            // 
-            this.DeskWidth.HeaderText = "Width";
-            this.DeskWidth.Name = "DeskWidth";
-            this.DeskWidth.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // CustName
-            // 
-            this.CustName.HeaderText = "Name";
-            this.CustName.Name = "CustName";
-            this.CustName.ReadOnly = true;
             // 
             // ViewAllQuotes
             // 
