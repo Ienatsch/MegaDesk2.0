@@ -21,12 +21,12 @@ namespace MegaDesk.Forms
                     row.Cells.Add(new DataGridViewTextBoxCell());
                 }
                 row.Cells[0].Value = quote.Name;
-                row.Cells[1].Value = quote.QuoteDate;
+                row.Cells[1].Value = quote.QuoteDate.ToString("d");
                 row.Cells[2].Value = quote.Width;
                 row.Cells[3].Value = quote.Depth;
                 row.Cells[4].Value = quote.NumDrawers;
                 row.Cells[5].Value = quote.SurfaceMaterial;
-                row.Cells[6].Value = quote.TotalPrice;
+                row.Cells[6].Value = "$" + quote.TotalPrice;
                 viewAllQuotesGrid.Rows.Add(row);
             }
         }
