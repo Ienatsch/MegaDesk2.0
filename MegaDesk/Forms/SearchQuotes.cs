@@ -45,19 +45,19 @@ namespace MegaDesk.Forms
             // Inserts each quote found into grid view
             foreach (DeskQuote quote in quotes)
             {
-                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewRow row = new DataGridViewRow();   
 
                 //Creating an instance of the column object 
-                DataGridViewColumn col = new DataGridViewColumn();
-                foreach (DataGridViewHeaderCell header in searchedQuotes.Rows)
-                {
-                    header.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                }   
+                //DataGridViewColumn col = new DataGridViewColumn();
+                //foreach (DataGridViewHeaderCell header in searchedQuotes.Rows)
+                //{
+                  //  header.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                //}   
 
                 for (int i = 0; i < 7; i++)
                 {
                     row.Cells.Add(new DataGridViewTextBoxCell());
-                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    //col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
                 row.Cells[0].Value = quote.Name;
                 row.Cells[1].Value = quote.QuoteDate;

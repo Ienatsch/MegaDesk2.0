@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewAllQuotesGrid = new System.Windows.Forms.DataGridView();
-            this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,50 +86,8 @@
             this.viewAllQuotesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.viewAllQuotesGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.viewAllQuotesGrid.Size = new System.Drawing.Size(743, 253);
+            this.viewAllQuotesGrid.Size = new System.Drawing.Size(742, 253);
             this.viewAllQuotesGrid.TabIndex = 0;
-            // 
-            // CustName
-            // 
-            this.CustName.HeaderText = "Name";
-            this.CustName.Name = "CustName";
-            this.CustName.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // DeskWidth
-            // 
-            this.DeskWidth.HeaderText = "Width";
-            this.DeskWidth.Name = "DeskWidth";
-            this.DeskWidth.ReadOnly = true;
-            // 
-            // Depth
-            // 
-            this.Depth.HeaderText = "Depth";
-            this.Depth.Name = "Depth";
-            this.Depth.ReadOnly = true;
-            // 
-            // Drawers
-            // 
-            this.Drawers.HeaderText = "Drawers";
-            this.Drawers.Name = "Drawers";
-            this.Drawers.ReadOnly = true;
-            // 
-            // Material
-            // 
-            this.Material.HeaderText = "Material";
-            this.Material.Name = "Material";
-            this.Material.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
             // 
             // label1
             // 
@@ -141,11 +99,53 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "All Stored Quotes";
             // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Material
+            // 
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.ReadOnly = true;
+            // 
+            // Drawers
+            // 
+            this.Drawers.HeaderText = "Drawers";
+            this.Drawers.Name = "Drawers";
+            this.Drawers.ReadOnly = true;
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            this.Depth.ReadOnly = true;
+            // 
+            // DeskWidth
+            // 
+            this.DeskWidth.HeaderText = "Width";
+            this.DeskWidth.Name = "DeskWidth";
+            this.DeskWidth.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // CustName
+            // 
+            this.CustName.HeaderText = "Name";
+            this.CustName.Name = "CustName";
+            this.CustName.ReadOnly = true;
+            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 416);
+            this.ClientSize = new System.Drawing.Size(793, 416);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewAllQuotesGrid);
             this.Name = "ViewAllQuotes";
@@ -159,6 +159,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView viewAllQuotesGrid;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeskWidth;
@@ -166,6 +167,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.Label label1;
     }
 }
