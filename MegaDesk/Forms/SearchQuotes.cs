@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace MegaDesk.Forms
 {
@@ -47,17 +45,9 @@ namespace MegaDesk.Forms
             {
                 DataGridViewRow row = new DataGridViewRow();   
 
-                //Creating an instance of the column object 
-                //DataGridViewColumn col = new DataGridViewColumn();
-                //foreach (DataGridViewHeaderCell header in searchedQuotes.Rows)
-                //{
-                  //  header.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                //}   
-
                 for (int i = 0; i < 7; i++)
                 {
                     row.Cells.Add(new DataGridViewTextBoxCell());
-                    //col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
                 row.Cells[0].Value = quote.Name;
                 row.Cells[1].Value = quote.QuoteDate;
