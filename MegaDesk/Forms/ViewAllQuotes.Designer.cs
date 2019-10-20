@@ -33,14 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.viewAllQuotesGrid = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeskWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewAllQuotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.Depth,
             this.Drawers,
             this.Material,
+            this.DeliveryMethod,
             this.Price});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -87,8 +89,18 @@
             this.viewAllQuotesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.viewAllQuotesGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.viewAllQuotesGrid.Size = new System.Drawing.Size(742, 253);
+            this.viewAllQuotesGrid.Size = new System.Drawing.Size(844, 253);
             this.viewAllQuotesGrid.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(387, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "All Stored Quotes";
             // 
             // CustName
             // 
@@ -126,27 +138,22 @@
             this.Material.Name = "Material";
             this.Material.ReadOnly = true;
             // 
+            // DeliveryMethod
+            // 
+            this.DeliveryMethod.HeaderText = "Delivery";
+            this.DeliveryMethod.Name = "DeliveryMethod";
+            // 
             // Price
             // 
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "All Stored Quotes";
-            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 416);
+            this.ClientSize = new System.Drawing.Size(895, 416);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewAllQuotesGrid);
             this.Name = "ViewAllQuotes";
@@ -167,6 +174,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryMethod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

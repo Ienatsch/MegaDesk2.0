@@ -40,6 +40,7 @@
             this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drawers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchQuotesBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,9 +50,9 @@
             // searchMaterials
             // 
             this.searchMaterials.FormattingEnabled = true;
-            this.searchMaterials.Location = new System.Drawing.Point(315, 95);
+            this.searchMaterials.Location = new System.Drawing.Point(393, 76);
             this.searchMaterials.Name = "searchMaterials";
-            this.searchMaterials.Size = new System.Drawing.Size(165, 21);
+            this.searchMaterials.Size = new System.Drawing.Size(124, 21);
             this.searchMaterials.TabIndex = 0;
             // 
             // searchedQuotes
@@ -74,6 +75,7 @@
             this.Depth,
             this.Drawers,
             this.Material,
+            this.DeliveryMethod,
             this.Price});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -83,7 +85,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.searchedQuotes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.searchedQuotes.Location = new System.Drawing.Point(29, 139);
+            this.searchedQuotes.Location = new System.Drawing.Point(34, 125);
             this.searchedQuotes.Name = "searchedQuotes";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -95,7 +97,7 @@
             this.searchedQuotes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.searchedQuotes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.searchedQuotes.Size = new System.Drawing.Size(743, 207);
+            this.searchedQuotes.Size = new System.Drawing.Size(843, 207);
             this.searchedQuotes.TabIndex = 1;
             // 
             // CustName
@@ -134,6 +136,11 @@
             this.Material.Name = "Material";
             this.Material.ReadOnly = true;
             // 
+            // DeliveryMethod
+            // 
+            this.DeliveryMethod.HeaderText = "Delivery";
+            this.DeliveryMethod.Name = "DeliveryMethod";
+            // 
             // Price
             // 
             this.Price.HeaderText = "Price";
@@ -143,7 +150,7 @@
             // searchQuotesBtn
             // 
             this.searchQuotesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuotesBtn.Location = new System.Drawing.Point(327, 370);
+            this.searchQuotesBtn.Location = new System.Drawing.Point(393, 359);
             this.searchQuotesBtn.Name = "searchQuotesBtn";
             this.searchQuotesBtn.Size = new System.Drawing.Size(136, 36);
             this.searchQuotesBtn.TabIndex = 1;
@@ -155,7 +162,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(298, 62);
+            this.label1.Location = new System.Drawing.Point(360, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 20);
             this.label1.TabIndex = 3;
@@ -165,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(915, 421);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchQuotesBtn);
             this.Controls.Add(this.searchedQuotes);
@@ -190,6 +197,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drawers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryMethod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

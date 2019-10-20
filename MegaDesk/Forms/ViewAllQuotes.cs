@@ -16,7 +16,7 @@ namespace MegaDesk.Forms
             foreach (DeskQuote quote in allQuotes)
             {
                 DataGridViewRow row = new DataGridViewRow();
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     row.Cells.Add(new DataGridViewTextBoxCell());
                 }
@@ -26,7 +26,8 @@ namespace MegaDesk.Forms
                 row.Cells[3].Value = quote.Depth + " in";
                 row.Cells[4].Value = quote.NumDrawers;
                 row.Cells[5].Value = quote.SurfaceMaterial;
-                row.Cells[6].Value = "$" + quote.TotalPrice.ToString("0.00"); 
+                row.Cells[6].Value = quote.RushOrderTime + " Day";
+                row.Cells[7].Value = "$" + quote.TotalPrice.ToString("0.00"); 
                 viewAllQuotesGrid.Rows.Add(row);
             }
         }
