@@ -26,7 +26,7 @@ namespace MegaDesk.Forms
                 row.Cells[3].Value = quote.Depth + " in";
                 row.Cells[4].Value = quote.NumDrawers;
                 row.Cells[5].Value = quote.SurfaceMaterial;
-                row.Cells[6].Value = "$" + quote.TotalPrice;
+                row.Cells[6].Value = "$" + quote.TotalPrice.ToString("0.00"); 
                 viewAllQuotesGrid.Rows.Add(row);
             }
         }
