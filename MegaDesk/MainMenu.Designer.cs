@@ -101,7 +101,7 @@
             this.Controls.Add(this.searchQuotes);
             this.Controls.Add(this.addQuote);
             this.Name = "MainMenu";
-            this.Text = "MegaDesk-Ienatsch";
+            this.Text = "MegaDesk-Ienatsch & Rodriguez";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OpenFormsOnKeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
